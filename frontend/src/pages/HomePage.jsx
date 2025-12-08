@@ -407,7 +407,7 @@ const HomePage = () => {
                     <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
                   ))}
                 </div>
-                <p className="text-slate-600 mb-6 leading-relaxed">"{testimonial.text}"</p>
+                <p className="text-slate-600 mb-6 leading-relaxed">&ldquo;{testimonial.text}&rdquo;</p>
                 <div className="mt-auto">
                   <p className="font-semibold text-slate-900">{testimonial.name}</p>
                   <p className="text-sm text-slate-500">{testimonial.location} • {testimonial.service}</p>
