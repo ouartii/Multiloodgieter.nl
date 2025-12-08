@@ -58,7 +58,7 @@ const QuotePage = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-32 pb-20">
+    <div className="min-h-screen pt-40 pb-24">
       <div className="container-custom">
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Form Section */}
