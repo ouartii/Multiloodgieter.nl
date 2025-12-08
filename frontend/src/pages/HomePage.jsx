@@ -419,7 +419,7 @@ const HomePage = () => {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="section-padding">
+      <section id="faq" className="py-16 lg:py-24">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
