@@ -1,34 +1,177 @@
+/* App specific styles */
+
+/* Remove default text-align center */
+.App {
+  text-align: left;
+}
+
+/* Logo animation */
 .App-logo {
-    height: 40vmin;
-    pointer-events: none;
+  height: 40vmin;
+  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
-
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-
-.App-link {
-    color: #61dafb;
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 @keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hero section specific */
+.hero-pattern {
+  background-image: 
+    radial-gradient(circle at 20% 50%, hsl(187 85% 48% / 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, hsl(200 80% 45% / 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 40% 80%, hsl(187 70% 40% / 0.05) 0%, transparent 40%);
+}
+
+/* Service card hover effect */
+.service-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, hsl(187 85% 48%), hsl(200 80% 45%));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* CTA Button styles */
+.btn-primary {
+  @apply bg-cyan-500 hover:bg-cyan-600 text-slate-900 font-semibold;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 10px 30px rgba(6, 182, 212, 0.3);
+}
+
+.btn-secondary {
+  @apply bg-white hover:bg-slate-50 text-slate-900 font-semibold border-2 border-slate-200;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+  @apply border-cyan-500;
+}
+
+/* Input focus styles */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: hsl(187 85% 48%);
+  box-shadow: 0 0 0 3px hsl(187 85% 48% / 0.1);
+}
+
+/* Navigation styles */
+.nav-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: hsl(187 85% 48%);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Testimonial card */
+.testimonial-card {
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-size: 80px;
+  font-family: Georgia, serif;
+  color: hsl(187 85% 48% / 0.15);
+  line-height: 1;
+}
+
+/* FAQ accordion */
+.faq-item {
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+/* Image overlay gradient */
+.image-overlay {
+  position: relative;
+}
+
+.image-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+/* Badge styles */
+.badge-primary {
+  @apply bg-cyan-500/10 text-cyan-600 border border-cyan-500/20;
+}
+
+/* Stats counter */
+.stat-number {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+}
+
+/* Mobile menu animation */
+.mobile-menu-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.mobile-menu-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.mobile-menu-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-menu-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
