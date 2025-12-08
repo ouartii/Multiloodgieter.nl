@@ -30,8 +30,8 @@ const ServicesPage = () => {
                 to={`/diensten/${service.id}`}
                 className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-100 transition-all hover:-translate-y-1"
               >
-                <div className="grid md:grid-cols-2">
-                  <div className="aspect-square md:aspect-auto overflow-hidden">
+                <div className="grid md:grid-cols-2 h-full">
+                  <div className="h-64 md:h-full overflow-hidden">
                     <img
                       src={service.image}
                       alt={service.title}
