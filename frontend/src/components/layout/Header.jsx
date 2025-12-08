@@ -74,11 +74,11 @@ export const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) =>
               link.hasDropdown ? (
                 <DropdownMenu key={link.path}>
-                  <DropdownMenuTrigger className="flex items-center gap-1 text-slate-700 hover:text-cyan-600 font-medium transition-colors outline-none">
+                  <DropdownMenuTrigger className="flex items-center gap-1 text-slate-700 hover:text-cyan-600 font-semibold text-base transition-colors outline-none">
                     {link.label}
                     <ChevronDown className="w-4 h-4" />
                   </DropdownMenuTrigger>
@@ -99,7 +99,7 @@ export const Header = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`nav-link font-medium ${
+                  className={`nav-link font-semibold text-base ${
                     isActive(link.path)
                       ? 'text-cyan-600'
                       : 'text-slate-700 hover:text-cyan-600'
@@ -118,7 +118,7 @@ export const Header = () => {
               <span className="font-semibold">{companyInfo.phone}</span>
             </a>
             <Link to="/offerte">
-              <Button className="btn-primary px-6 py-2.5 rounded-full">
+              <Button className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-7 py-3 rounded-full text-base">
                 Gratis Offerte
               </Button>
             </Link>
