@@ -83,15 +83,14 @@ export const Header = () => {
                     {link.label}
                     <ChevronDown className="w-4 h-4" />
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-64 bg-white shadow-xl border-0 p-2">
+                  <DropdownMenuContent className="w-56 bg-white shadow-xl border-0 p-2">
                     {services.map((service) => (
                       <DropdownMenuItem key={service.id} asChild>
                         <Link
                           to={`/diensten/${service.id}`}
-                          className="block px-4 py-3 rounded-lg hover:bg-cyan-50 transition-colors cursor-pointer"
+                          className="block px-4 py-2.5 rounded-lg hover:bg-cyan-50 transition-colors cursor-pointer font-medium text-slate-700 hover:text-cyan-600"
                         >
-                          <span className="font-medium text-slate-800">{service.title}</span>
-                          <p className="text-sm text-slate-500 mt-1">{service.shortDescription}</p>
+                          {service.title}
                         </Link>
                       </DropdownMenuItem>
                     ))}
