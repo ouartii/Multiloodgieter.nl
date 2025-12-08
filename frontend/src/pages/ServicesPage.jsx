@@ -5,7 +5,7 @@ import { services } from '../data/mock';
 
 const ServicesPage = () => {
   return (
-    <div className="min-h-screen pt-32">
+    <div className="min-h-screen pt-40">
       {/* Hero Section */}
       <section className="container-custom pb-16">
         <div className="max-w-3xl">
