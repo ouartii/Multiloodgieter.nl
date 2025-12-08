@@ -14,7 +14,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen pt-32 pb-20">
+    <div className="min-h-screen pt-40 pb-24">
       <div className="container-custom">
         {/* Header */}
         <div className="max-w-3xl mb-16">
