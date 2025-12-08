@@ -197,50 +197,162 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="section-padding">
+      {/* Featured Services Section - Creative Grid */}
+      <section className="py-16 lg:py-24">
         <div className="container-custom">
           <div className="text-center mb-16">
+            <span className="inline-block bg-cyan-500/10 text-cyan-700 px-4 py-1.5 rounded-full text-sm font-medium mb-4">
+              Onze Specialisaties
+            </span>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Onze Diensten
+              Wat Kunnen Wij Voor U Doen?
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Van kleine reparaties tot complete renovaties – wij helpen u met al uw loodgieterswensen
+              Van spoedreparaties tot complete renovaties – ontdek ons volledige dienstenaanbod
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Link
-                key={service.id}
-                to={`/diensten/${service.id}`}
-                className="group service-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-100 transition-shadow"
-              >
-                <div className="aspect-video overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+          {/* Bento Grid Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Large Featured Card - Loodgieter Werkzaamheden */}
+            <Link
+              to="/diensten/loodgieter-werkzaamheden"
+              className="group lg:col-span-2 lg:row-span-2 relative overflow-hidden rounded-3xl bg-slate-900 min-h-[400px]"
+            >
+              <img
+                src={featuredServices[0].image}
+                alt={featuredServices[0].title}
+                className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
+              <div className="relative h-full p-8 flex flex-col justify-end">
+                <div className="w-14 h-14 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4">
+                  <Wrench className="w-7 h-7 text-cyan-400" />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-cyan-600 transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-slate-600 mb-4">{service.shortDescription}</p>
-                  <span className="inline-flex items-center text-cyan-600 font-medium">
-                    Meer informatie
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </span>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
+                  {featuredServices[0].title}
+                </h3>
+                <p className="text-slate-300 mb-4 max-w-lg">
+                  {featuredServices[0].description}
+                </p>
+                <span className="inline-flex items-center text-cyan-400 font-semibold group-hover:gap-3 gap-2 transition-all">
+                  Meer informatie
+                  <ArrowRight className="w-5 h-5" />
+                </span>
+              </div>
+            </Link>
+
+            {/* Waterleiding & Afvoer */}
+            <Link
+              to="/diensten/waterleiding-afvoer"
+              className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 to-cyan-600 min-h-[190px]"
+            >
+              <div className="absolute top-4 right-4 w-24 h-24 bg-white/10 rounded-full blur-2xl" />
+              <div className="relative h-full p-6 flex flex-col justify-between">
+                <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                  <Droplets className="w-6 h-6 text-white" />
                 </div>
-              </Link>
-            ))}
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">{featuredServices[1].title}</h3>
+                  <p className="text-blue-100 text-sm line-clamp-2">{featuredServices[1].description}</p>
+                </div>
+                <ArrowRight className="w-5 h-5 text-white/70 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            {/* CV Installaties */}
+            <Link
+              to="/diensten/cv-installatie"
+              className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-orange-500 to-amber-500 min-h-[190px]"
+            >
+              <div className="absolute bottom-4 left-4 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
+              <div className="relative h-full p-6 flex flex-col justify-between">
+                <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                  <Flame className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">{featuredServices[2].title}</h3>
+                  <p className="text-orange-100 text-sm line-clamp-2">{featuredServices[2].description}</p>
+                </div>
+                <ArrowRight className="w-5 h-5 text-white/70 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            {/* Badkamer Renovatie */}
+            <Link
+              to="/diensten/badkamer-renovatie"
+              className="group relative overflow-hidden rounded-3xl min-h-[220px]"
+            >
+              <img
+                src={featuredServices[3].image}
+                alt={featuredServices[3].title}
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
+              <div className="relative h-full p-6 flex flex-col justify-end">
+                <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center mb-3">
+                  <Bath className="w-5 h-5 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-white mb-1">{featuredServices[3].title}</h3>
+                <p className="text-slate-300 text-sm line-clamp-2">{featuredServices[3].description}</p>
+              </div>
+            </Link>
+
+            {/* Keuken Installatie */}
+            <Link
+              to="/diensten/keuken-installatie"
+              className="group relative overflow-hidden rounded-3xl min-h-[220px]"
+            >
+              <img
+                src={featuredServices[4].image}
+                alt={featuredServices[4].title}
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
+              <div className="relative h-full p-6 flex flex-col justify-end">
+                <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center mb-3">
+                  <UtensilsCrossed className="w-5 h-5 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-white mb-1">{featuredServices[4].title}</h3>
+                <p className="text-slate-300 text-sm line-clamp-2">{featuredServices[4].description}</p>
+              </div>
+            </Link>
+
+            {/* Woning Renovatie */}
+            <Link
+              to="/diensten/woning-renovatie"
+              className="group relative overflow-hidden rounded-3xl min-h-[220px]"
+            >
+              <img
+                src={featuredServices[5].image}
+                alt={featuredServices[5].title}
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
+              <div className="relative h-full p-6 flex flex-col justify-end">
+                <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center mb-3">
+                  <Home className="w-5 h-5 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-white mb-1">{featuredServices[5].title}</h3>
+                <p className="text-slate-300 text-sm line-clamp-2">{featuredServices[5].description}</p>
+              </div>
+            </Link>
+          </div>
+
+          {/* View All Services */}
+          <div className="text-center mt-12">
+            <Link to="/diensten">
+              <Button variant="outline" className="btn-secondary px-8 py-3 rounded-full">
+                Bekijk Alle Diensten
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="bg-slate-900 section-padding relative overflow-hidden">
+      <section className="bg-slate-900 py-16 lg:py-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-400 rounded-full blur-3xl" />
