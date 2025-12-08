@@ -30,7 +30,6 @@ export const Header = () => {
   const isActive = (path) => location.pathname === path;
 
   const navLinks = [
-    { path: '/', label: 'Home' },
     { path: '/diensten', label: 'Diensten', hasDropdown: true },
     { path: '/offerte', label: 'Offerte Aanvragen' },
     { path: '/contact', label: 'Contact' },
