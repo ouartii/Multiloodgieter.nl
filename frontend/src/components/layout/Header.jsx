@@ -83,7 +83,7 @@ export const Header = () => {
                     {link.label}
                     <ChevronDown className="w-4 h-4" />
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-56 bg-white shadow-xl border-0 p-2">
+                  <DropdownMenuContent className="w-72 bg-white shadow-xl border-0 p-2">
                     {services.map((service) => (
                       <DropdownMenuItem key={service.id} asChild>
                         <Link
