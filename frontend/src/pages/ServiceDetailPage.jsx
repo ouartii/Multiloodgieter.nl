@@ -15,7 +15,7 @@ const ServiceDetailPage = () => {
   const otherServices = services.filter((s) => s.id !== serviceId).slice(0, 3);
 
   return (
-    <div className="min-h-screen pt-32">
+    <div className="min-h-screen pt-40">
       {/* Breadcrumb */}
       <div className="container-custom mb-8">
         <nav className="flex items-center gap-2 text-sm">
