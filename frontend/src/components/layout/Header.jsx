@@ -139,15 +139,6 @@ export const Header = () => {
           <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-xl border-t animate-fade-in">
             <div className="container-custom py-4">
               <div className="flex flex-col gap-2">
-                <Link
-                  to="/"
-                  className={`px-4 py-3 rounded-lg font-medium ${
-                    isActive('/') ? 'bg-cyan-50 text-cyan-600' : 'text-slate-700'
-                  }`}
-                >
-                  Home
-                </Link>
-                
                 <div className="px-4 py-2">
                   <span className="text-sm font-semibold text-slate-400 uppercase tracking-wider">Diensten</span>
                 </div>
