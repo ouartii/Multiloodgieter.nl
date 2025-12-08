@@ -6,13 +6,13 @@ import { Button } from '../components/ui/button';
 
 const ThankYouPage = () => {
   return (
-    <div className="min-h-screen pt-32 pb-20 flex items-center">
+    <div className="min-h-screen pt-40 pb-24 flex items-center bg-slate-50">
       <div className="container-custom">
         <div className="max-w-2xl mx-auto text-center">
           {/* Success Icon */}
-          <div className="mb-8 animate-fade-in">
-            <div className="w-24 h-24 bg-emerald-500/10 rounded-full flex items-center justify-center mx-auto animate-pulse-glow">
-              <CheckCircle className="w-12 h-12 text-emerald-500" />
+          <div className="mb-10 animate-fade-in">
+            <div className="w-28 h-28 bg-emerald-500/10 rounded-full flex items-center justify-center mx-auto animate-pulse-glow">
+              <CheckCircle className="w-14 h-14 text-emerald-500" />
             </div>
           </div>
 
@@ -21,56 +21,56 @@ const ThankYouPage = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
               Bedankt voor uw aanvraag!
             </h1>
-            <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+            <p className="text-xl text-slate-600 mb-10 leading-relaxed">
               Wij hebben uw offerteaanvraag in goede orde ontvangen. 
               Een van onze specialisten neemt binnen 24 uur contact met u op.
             </p>
           </div>
 
           {/* What's Next Card */}
-          <div className="bg-slate-50 rounded-2xl p-8 mb-8 text-left animate-fade-in-up stagger-2">
-            <h2 className="text-xl font-bold text-slate-900 mb-6">Wat kunt u verwachten?</h2>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-cyan-500/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-cyan-600 font-bold text-sm">1</span>
+          <div className="bg-white rounded-2xl p-8 md:p-10 mb-10 text-left animate-fade-in-up stagger-2 shadow-sm border border-slate-100">
+            <h2 className="text-xl font-bold text-slate-900 mb-8">Wat kunt u verwachten?</h2>
+            <ul className="space-y-6">
+              <li className="flex items-start gap-5">
+                <div className="w-10 h-10 bg-cyan-500/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-cyan-600 font-bold">1</span>
                 </div>
                 <div>
-                  <p className="font-semibold text-slate-900">Bevestiging per e-mail</p>
-                  <p className="text-slate-600 text-sm">U ontvangt direct een bevestiging in uw inbox</p>
+                  <p className="font-semibold text-slate-900 mb-1">Bevestiging per e-mail</p>
+                  <p className="text-slate-600">U ontvangt direct een bevestiging in uw inbox</p>
                 </div>
               </li>
-              <li className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-cyan-500/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-cyan-600 font-bold text-sm">2</span>
+              <li className="flex items-start gap-5">
+                <div className="w-10 h-10 bg-cyan-500/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-cyan-600 font-bold">2</span>
                 </div>
                 <div>
-                  <p className="font-semibold text-slate-900">Persoonlijk contact</p>
-                  <p className="text-slate-600 text-sm">Wij nemen binnen 24 uur contact met u op om uw aanvraag te bespreken</p>
+                  <p className="font-semibold text-slate-900 mb-1">Persoonlijk contact</p>
+                  <p className="text-slate-600">Wij nemen binnen 24 uur contact met u op om uw aanvraag te bespreken</p>
                 </div>
               </li>
-              <li className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-cyan-500/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-cyan-600 font-bold text-sm">3</span>
+              <li className="flex items-start gap-5">
+                <div className="w-10 h-10 bg-cyan-500/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-cyan-600 font-bold">3</span>
                 </div>
                 <div>
-                  <p className="font-semibold text-slate-900">Offerte op maat</p>
-                  <p className="text-slate-600 text-sm">U ontvangt een gedetailleerde offerte afgestemd op uw situatie</p>
+                  <p className="font-semibold text-slate-900 mb-1">Offerte op maat</p>
+                  <p className="text-slate-600">U ontvangt een gedetailleerde offerte afgestemd op uw situatie</p>
                 </div>
               </li>
             </ul>
           </div>
 
           {/* Contact Info */}
-          <div className="bg-cyan-500/10 rounded-2xl p-6 border border-cyan-500/20 mb-8 animate-fade-in-up stagger-3">
+          <div className="bg-cyan-500/10 rounded-2xl p-8 border border-cyan-500/20 mb-10 animate-fade-in-up stagger-3">
             <p className="text-slate-700 mb-4">
               <strong>Spoed?</strong> Neem direct contact met ons op:
             </p>
             <a
               href={`tel:${companyInfo.phone}`}
-              className="inline-flex items-center gap-2 text-cyan-600 font-bold text-xl hover:text-cyan-700 transition-colors"
+              className="inline-flex items-center gap-3 text-cyan-600 font-bold text-2xl hover:text-cyan-700 transition-colors"
             >
-              <Phone className="w-6 h-6" />
+              <Phone className="w-7 h-7" />
               {companyInfo.phone}
             </a>
           </div>
