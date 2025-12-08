@@ -132,8 +132,8 @@ const HomePage = () => {
             <div className="relative animate-slide-in-right hidden lg:block">
               <div className="relative z-10">
                 <img
-                  src="https://images.unsplash.com/photo-1635221798248-8a3452ad07cd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwbHVtYmVyfGVufDB8fHx8MTc2NTE4Njg3Mnww&ixlib=rb-4.1.0&q=85"
-                  alt="Professionele loodgieter aan het werk"
+                  src="https://images.unsplash.com/photo-1696987007764-7f8b85dd3033?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBiYXRocm9vbXxlbnwwfHx8fDE3NjUyMDUzMDF8MA&ixlib=rb-4.1.0&q=85"
+                  alt="Moderne luxe badkamer - Multi Loodgieter"
                   className="rounded-2xl shadow-2xl w-full h-[500px] object-cover"
                 />
               </div>
