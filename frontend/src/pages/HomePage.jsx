@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, ArrowRight, Star, Clock, Shield, Award, MapPin, ThumbsUp, Euro, CheckCircle } from 'lucide-react';
+import { Phone, ArrowRight, Star, Clock, Shield, Award, MapPin, ThumbsUp, Euro, CheckCircle, Wrench, Droplets, Flame, Bath, UtensilsCrossed, Home } from 'lucide-react';
 import { companyInfo, services, testimonials, uspPoints, faqItems } from '../data/mock';
 import { Button } from '../components/ui/button';
 import {
@@ -18,6 +18,58 @@ const iconMap = {
   Euro,
   ThumbsUp,
 };
+
+// Featured services data for the homepage
+const featuredServices = [
+  {
+    id: 'loodgieter-werkzaamheden',
+    title: 'Loodgieter Werkzaamheden',
+    description: 'Van lekkages tot verstoppingen – onze vakmannen lossen elk sanitair probleem snel en vakkundig op. 24/7 beschikbaar voor spoedgevallen.',
+    icon: Wrench,
+    image: 'https://images.unsplash.com/photo-1635221798248-8a3452ad07cd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwbHVtYmVyfGVufDB8fHx8MTc2NTE4Njg3Mnww&ixlib=rb-4.1.0&q=85',
+    accent: 'from-cyan-500 to-teal-500',
+  },
+  {
+    id: 'waterleiding-afvoer',
+    title: 'Waterleiding & Afvoer',
+    description: 'Lekkage opsporing, leidingwerk reparatie en afvoer ontstopping. Met moderne apparatuur detecteren en repareren wij elk probleem.',
+    icon: Droplets,
+    image: 'https://images.unsplash.com/photo-1604118600242-e7a6d23ec3a9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBwbHVtYmVyfGVufDB8fHx8MTc2NTE4Njg3Mnww&ixlib=rb-4.1.0&q=85',
+    accent: 'from-blue-500 to-cyan-500',
+  },
+  {
+    id: 'cv-installatie',
+    title: 'CV Installaties',
+    description: 'Nieuwe CV-ketel, vloerverwarming of radiatoren nodig? Wij installeren energiezuinige verwarmingssystemen met uitgebreide garantie.',
+    icon: Flame,
+    image: 'https://images.unsplash.com/photo-1751486289950-5c4898a4c773?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwzfHxoZWF0aW5nJTIwcGlwZXN8ZW58MHx8fHwxNzY1MTg2ODgxfDA&ixlib=rb-4.1.0&q=85',
+    accent: 'from-orange-500 to-amber-500',
+  },
+  {
+    id: 'badkamer-renovatie',
+    title: 'Badkamer Renovatie',
+    description: 'Droomt u van een nieuwe badkamer? Van ontwerp tot oplevering verzorgen wij uw complete badkamerrenovatie met oog voor detail.',
+    icon: Bath,
+    image: 'https://images.unsplash.com/photo-1638799869566-b17fa794c4de?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBiYXRocm9vbXxlbnwwfHx8fDE3NjUxODY4NzZ8MA&ixlib=rb-4.1.0&q=85',
+    accent: 'from-teal-500 to-emerald-500',
+  },
+  {
+    id: 'keuken-installatie',
+    title: 'Keuken Installatie',
+    description: 'Complete keukeninstallatie inclusief waterleiding, afvoer en gasaansluiting. Alles conform de hoogste veiligheidsnormen.',
+    icon: UtensilsCrossed,
+    image: 'https://images.unsplash.com/photo-1556912167-f556f1f39fdf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBraXRjaGVufGVufDB8fHx8MTc2NTEyNDc5NXww&ixlib=rb-4.1.0&q=85',
+    accent: 'from-slate-600 to-slate-800',
+  },
+  {
+    id: 'woning-renovatie',
+    title: 'Woning Renovatie',
+    description: 'Complete woningrenovatie met focus op leidingwerk. Nieuwe waterleidingen, afvoeren en sanitaire installaties voor heel uw huis.',
+    icon: Home,
+    image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBiYXRocm9vbXxlbnwwfHx8fDE3NjUxODY4NzZ8MA&ixlib=rb-4.1.0&q=85',
+    accent: 'from-indigo-500 to-purple-500',
+  },
+];
 
 const HomePage = () => {
   return (
@@ -114,7 +166,7 @@ const HomePage = () => {
       </section>
 
       {/* USP Section */}
-      <section className="bg-slate-50 section-padding">
+      <section className="bg-slate-50 py-16 lg:py-24">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
